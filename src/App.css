@@ -256,6 +256,22 @@ body {
   text-align: center;
 }
 
+/* Particles Styles */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.App {
+  position: relative;
+  z-index: 2;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .intro-text h1 {
