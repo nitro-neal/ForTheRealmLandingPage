@@ -21,10 +21,6 @@ function Header() {
         </ul>
       </nav>
       <div className="header-actions">
-        <select className="language-select">
-          <option value="en">ENG</option>
-          <option value="es">ESP</option>
-        </select>
         <button className="buy-button">Buy Now</button>
       </div>
     </header>

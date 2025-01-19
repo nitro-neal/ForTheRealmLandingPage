@@ -5,46 +5,97 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Averia Serif Libre", serif;
+  font-weight: 300;
+  overflow-x: hidden;
+  min-height: 100%;
+  background: #000;
+}
+
+/* Typography Classes */
+.heading-text {
+  font-family: "Bebas Neue", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.body-text {
+  font-family: "Averia Serif Libre", serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 .app {
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-              /* url('/background.png'); */
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(20, 20, 20, 0.7)),
+    radial-gradient(circle at 50% 70%, rgba(40, 40, 40, 0.8), rgba(0, 0, 0, 0.8)),
+    url('./background.png');
   background-size: cover;
   background-position: center;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
+  background-repeat: no-repeat;
+  z-index: -1;
+  will-change: transform;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(to bottom, 
+    transparent 0%,
+    rgba(20, 20, 20, 0.3) 20%,
+    rgba(30, 30, 30, 0.6) 40%,
+    rgba(40, 40, 40, 0.8) 60%,
+    #2a2a2a 100%
+  );
 }
 
 .main-content {
-  flex-grow: 1;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 2rem;
+  margin-bottom: 50vh;
 }
 
 .intro-text {
   max-width: 800px;
   margin: 0 auto;
+  padding-top: 80px; /* Add space for the fixed header */
 }
 
-.intro-text h1 {
-  font-size: 3.5rem;
+.intro-text h1, .intro-text h1 span {
+  font-family: "Bebas Neue", serif;
+  font-size: 4.5rem;
   margin-bottom: 2rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  line-height: 1.2;
+  line-height: 1.1;
 }
 
 .intro-text h1 span {
   color: #ff6b6b;
   display: block;
+  font-size: 6rem; /* Make the game title larger */
+  margin-top: -0.5rem; /* Adjust spacing between the two lines */
 }
 
 .buttons {
@@ -52,6 +103,145 @@ body {
   justify-content: center;
   gap: 1.5rem;
   margin-top: 2rem;
+}
+
+/* Features Section */
+.features-section {
+  background: radial-gradient(circle at center, #2a2a2a 0%, #1a1a1a 100%);
+  padding: 8rem 2rem;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.features-section::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to bottom, transparent, #2a2a2a);
+}
+
+.features-section h2 {
+  font-family: "Bebas Neue", serif;
+  text-align: center;
+  font-size: 3.5rem;
+  margin-bottom: 4rem;
+  letter-spacing: 3px;
+  color: #ff6b6b;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.feature-card h3 {
+  font-family: "Bebas Neue", serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ff6b6b;
+  letter-spacing: 1px;
+}
+
+.feature-card p {
+  font-family: "Averia Serif Libre", serif;
+  font-weight: 300;
+  color: #ccc;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* Footer Styles */
+.footer {
+  background: radial-gradient(circle at center, #2a2a2a 0%, #1a1a1a 100%);
+  padding: 2rem 0;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  font-family: "Bebas Neue", serif;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ff6b6b;
+}
+
+.footer-copyright {
+  font-family: "Averia Serif Libre", serif;
+  font-weight: 300;
+  color: #666;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .intro-text h1 {
+    font-size: 2.5rem;
+  }
+  
+  .features-section {
+    padding: 4rem 1rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-links {
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .App {
