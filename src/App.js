@@ -24,7 +24,7 @@ function App() {
         <Header />
         <main className="main-content">
           <div className="intro-text">
-            <h1>ENTER THE WORLD OF <span>FOR THE REALM</span></h1>
+            <img src="/logo7.png" alt="For The Realm" className="main-logo" />
             <div className="buttons">
               <Button type="primary" link="https://store.yourgame.com">
                 Buy Now
@@ -71,7 +71,7 @@ function App() {
               </a>
             </div>
             <div className="footer-copyright">
-              © 2024 For The Realm. All rights reserved.
+              2024 For The Realm. All rights reserved.
             </div>
           </div>
         </footer>
