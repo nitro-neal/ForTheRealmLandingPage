@@ -101,7 +101,7 @@ function App() {
         <Header />
         <main className="main-content">
           <div className="intro-text">
-            <img src="/logo7.png" alt="For The Realm" className="main-logo" />
+            <img src={process.env.PUBLIC_URL + "/logo7.png"} alt="For The Realm" className="main-logo" />
             <div className="buttons">
               <Button type="primary" link="https://store.yourgame.com">
                 Buy Now
