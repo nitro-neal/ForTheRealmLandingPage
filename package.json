@@ -1,7 +1,7 @@
 {
   "name": "my-game-landing-page",
   "version": "0.1.0",
-  "homepage": "https://nitro-neal.github.io/ForTheRealmLandingPage",
+  "homepage": "https://www.for-the-realm.com",
   "private": true,
   "dependencies": {
     "cra-template": "1.2.0",
